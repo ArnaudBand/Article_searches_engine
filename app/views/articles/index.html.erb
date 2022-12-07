@@ -1,14 +1,7 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Articles</h1>
-
 <div id="articles">
   <% @articles.each do |article| %>
     <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
+    <%= button_to "Counter #{article.counter_articles}", article_counter_articles_path(article), method: :post %>
   <% end %>
 </div>
 
-<%= link_to "New article", new_article_path %>
