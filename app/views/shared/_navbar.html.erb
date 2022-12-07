@@ -1,0 +1,14 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar_left">
+      <%= link_to "Articles", articles_path, class: "navbar_logo" %>
+    </div>
+    <div class="navbar_right">
+      <%= link_to "New article", new_article_path, class: "navbar_item" %>
+      <%= render "searches/search" %>
+    </div>
+  </nav>
+  <div class="header_content">
+    <h3>Search engine for Articles</h3>
+  </div>
+</header>
