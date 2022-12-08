@@ -1,5 +1,4 @@
 <div class="container" id="<%= dom_id article %>">
-  <a href="<%= article_counter_articles_path(article) %>" method: :post >
     <h2>
       <%= link_to article.title, article %>
     </h2>
@@ -9,5 +8,4 @@
     <p>
       You have visited <%= article.counter_articles %> times
     </p>
-  </a>
 </div>
