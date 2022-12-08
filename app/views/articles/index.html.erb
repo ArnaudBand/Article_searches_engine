@@ -1,7 +1,6 @@
 <div id="articles">
   <% @articles.each do |article| %>
     <%= render article %>
-    <%= button_to "Counter #{article.counter_articles}", article_counter_articles_path(article), method: :post %>
   <% end %>
 </div>
 

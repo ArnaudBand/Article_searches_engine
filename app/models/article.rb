@@ -3,15 +3,9 @@ class Article < ApplicationRecord
 
   def self.search(search)
     if search
-      article = Article.find_by(title: search)
-      if article
-        where(title: search)
-      else
-        articles = Article.all
-      end  
+      where('title LIKE ?', "%#{search}%")
     else
-      articles = Article.all
+      all
     end
   end
-
 end
